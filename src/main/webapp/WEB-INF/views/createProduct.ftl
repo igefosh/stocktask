@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create User</title>
+    <title>Create Product</title>
 </head>
 <body>
-<form name="user" action="addUser" method="post">
-    <p>Name</p>
-    <input title="Name" type="text" name="name">
-    <p>Email</p>
-    <input title="Email" type="text" name="email">
-    <p>Age</p>
-    <input title="Age" type="text" name="age">
+<h1>Create Product</h1>
+<form name="product" action="addProduct" method="post">
+    <p>ARTICLE</p>
+    <input title="Art" type="text" name="art" required>
+    <p>NAME</p>
+    <input title="Name" type="text" name="name" required>
+    <p>SHELF</p>
+    <input title="Shelf" type="number" name="shelf" required>
+    <p>BOX</p>
+    <input title="Box" type="text" name="box" required>
     <br>
     <input type="submit" value="OK">
 </form>
 <br>
-<a href="/stocktask_war/users">To Users</a>
+<a href="/stocktask_war/products">To Products</a>
 </body>
 </html>

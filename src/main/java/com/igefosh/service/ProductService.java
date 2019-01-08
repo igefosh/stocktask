@@ -1,18 +1,18 @@
 package com.igefosh.service;
 
-import com.igefosh.entity.User;
+import com.igefosh.entity.Product;
 
 import java.util.List;
 
-public interface UserService {
+public interface ProductService {
 
-    User getById(int id);
+    Product getById(int id);
 
-    void save (User user);
+    void save (Product product);
 
-    void update (User user);
+    void update (Product product);
 
     void delete (int id);
 
-    List<User> findAll();
+    List<Product> findAll();
 }

@@ -1,45 +1,67 @@
 package com.igefosh.dao;
 
-import com.igefosh.entity.User;
-import com.igefosh.mapper.UserMapper;
+import com.igefosh.entity.Product;
+import com.igefosh.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
-public class UserDaoImpl implements UserDao {
+public class ProductDaoImpl implements ProductDao {
 
     public final JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public UserDaoImpl(JdbcTemplate jdbcTemplate){
+    public ProductDaoImpl(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = jdbcTemplate;
     }
 
-
-    public User getById(int id) {
+    /**
+     * возврат значения таблицы по ID
+     * @param id ID
+     * @return объект Product
+     */
+    public Product getById(int id) {
         String sql = "SELECT * FROM product WHERE id=?";
-        return jdbcTemplate.queryForObject(sql, new UserMapper(), id);
+        return jdbcTemplate.queryForObject(sql, new ProductMapper(), id);
     }
 
 
-    public void save(User user) {
-        String sql = "INSERT INTO product (name, email, age) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, user.getName(), user.getEmail(), user.getAge());
+    /**
+     * сохранение значений в таблицу продуктов
+     * @param product сохраняемый продукт
+     */
+    public void save(Product product) {
+        String sql = "INSERT INTO product (art, name, shelf, box) VALUES (?, ?, ?, ?)";
+        jdbcTemplate.update(sql, product.getArt(), product.getName(), product.getShelf(),
+                product.getBox());
     }
 
-    public void update(User user) {
-        String sql = "UPDATE product SET name=?, email=?, age=? WHERE id=?";
-        jdbcTemplate.update(sql, user.getName(), user.getEmail(), user.getAge(), user.getId());
+    /**
+     * изменение продукта
+     * @param product для изменения
+     */
+    public void update(Product product) {
+        String sql = "UPDATE product SET art=?, name=?, shelf=?, box=? WHERE id=?";
+        jdbcTemplate.update(sql, product.getArt(), product.getName(), product.getShelf(),
+                product.getBox(), product.getId());
     }
 
+    /**
+     * удаление продукта из таблицы
+     * @param id ID
+     */
     public void delete(int id) {
         String sql = "DELETE FROM product WHERE id=?";
         jdbcTemplate.update(sql, id);
     }
 
-    public List<User> findAll() {
+    /**
+     * возврат всех продуктов из таблицы
+     * @return List из Product
+     */
+    public List<Product> findAll() {
         String sql = "SELECT * FROM product";
-        return jdbcTemplate.query(sql, new UserMapper());
+        return jdbcTemplate.query(sql, new ProductMapper());
     }
 }

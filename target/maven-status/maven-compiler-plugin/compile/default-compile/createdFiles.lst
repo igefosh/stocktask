@@ -1,1 +1,6 @@
+com/igefosh/service/UserService.class
+com/igefosh/service/TestBean.class
+com/igefosh/config/SpringConfig.class
+com/igefosh/dao/UserDao.class
 com/igefosh/App.class
+com/igefosh/controller/UserController.class

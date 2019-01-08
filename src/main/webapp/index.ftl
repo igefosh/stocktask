@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hello!!!</title>
 </head>
 <body>
-<H1>HELLO WORLD</H1>
+<H1 align="center">STOCK</H1>
+<br>
+<table align="center">
+    <tr>
+        <td>
+            <a href="products">>>>START!<<<</a>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>

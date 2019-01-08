@@ -1,13 +1,17 @@
 package com.igefosh.entity;
 
-public class User {
+/**
+ * Объект для таблицы товаров
+ */
+public class Product {
 
     private int id;
+    private String art;
     private String name;
-    private String email;
-    private int age;
+    private int shelf;
+    private String box;
 
-    public User() {
+    public Product() {
     }
 
     public int getId() {
@@ -18,6 +22,14 @@ public class User {
         this.id = id;
     }
 
+    public String getArt() {
+        return art;
+    }
+
+    public void setArt(String art) {
+        this.art = art;
+    }
+
     public String getName() {
         return name;
     }
@@ -26,19 +38,19 @@ public class User {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public int getShelf() {
+        return shelf;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setShelf(int shelf) {
+        this.shelf = shelf;
     }
 
-    public int getAge() {
-        return age;
+    public String getBox() {
+        return box;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBox(String box) {
+        this.box = box;
     }
 }

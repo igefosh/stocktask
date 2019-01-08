@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 // stocktask_war/
 @Controller
 @RequestMapping("/")
-public class UserController {
+public class ProductController {
 
     @Autowired
     public ProductService productService;
@@ -18,11 +18,6 @@ public class UserController {
     @GetMapping("/")
     public String index(){
         return "index";
-    }
-
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello";
     }
 
     @GetMapping("/products")
@@ -56,7 +51,7 @@ public class UserController {
 
     @GetMapping("/update/{id}")
     public String update(@PathVariable("id") int id, Model model){
-        model.addAttribute("user", productService.getById(id));
+        model.addAttribute("product", productService.getById(id));
         return "editProduct";
     }
 

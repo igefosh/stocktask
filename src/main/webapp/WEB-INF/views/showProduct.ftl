@@ -2,29 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User Info</title>
+    <title>Product Info</title>
 </head>
 <body>
-<h1>User Info</h1>
+<h1>Product Info</h1>
 <table>
     <tr>
         <td>ID</td>
-        <td>${user.id}</td>
+        <td>${product.id}</td>
     </tr>
     <tr>
-    <td>NAME</td>
-    <td>${user.name}</td>
+        <td>NAME</td>
+        <td>${product.name}</td>
     </tr>
     <tr>
-    <td>EMAIL</td>
-    <td>${user.email}</td>
+        <td>SHELF</td>
+        <td>${product.shelf}</td>
     </tr>
     <tr>
-    <td>AGE</td>
-    <td>${user.age}</td>
+        <td>BOX</td>
+        <td>${product.box}</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="/stocktask_war/products">Back</a>
+        </td>
     </tr>
 </table>
 <br>
-<a href="/stocktask_war/users">Back</a>
+
 </body>
 </html>

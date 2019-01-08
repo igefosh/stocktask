@@ -1,35 +1,56 @@
 package com.igefosh.service;
 
-import com.igefosh.dao.UserDao;
-import com.igefosh.entity.User;
+import com.igefosh.dao.ProductDao;
+import com.igefosh.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    public UserDao userDao;
+    public ProductDao productDao;
 
-    public User getById(int id) {
-        return userDao.getById(id);
+    /**
+     * возврат значения таблицы по ID
+     * @param id ID
+     * @return объект Product
+     */
+    public Product getById(int id) {
+        return productDao.getById(id);
     }
 
-    public void save(User user) {
-        userDao.save(user);
+    /**
+     * сохранение значений в таблицу продуктов
+     * @param product сохраняемый продукт
+     */
+    public void save(Product product) {
+        productDao.save(product);
     }
 
-    public void update(User user) {
-        userDao.update(user);
+    /**
+     * изменение продукта
+     * @param product для изменения
+     */
+    public void update(Product product) {
+        productDao.update(product);
     }
 
+    /**
+     * удаление продукта из таблицы
+     * @param id ID
+     */
     public void delete(int id) {
-        userDao.delete(id);
+        productDao.delete(id);
     }
 
-    public List<User> findAll() {
-        return userDao.findAll();
+    /**
+     * возврат всех продуктов из таблицы
+     * @return List из Product
+     */
+    public List<Product> findAll() {
+        return productDao.findAll();
     }
 }

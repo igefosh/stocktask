@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Update User</title>
+    <title>Update Product</title>
 </head>
 <body>
-<form name="user" action="updateUser" method="post">
+<h1>Update Product</h1>
+<form name="product" action="updateProduct" method="post">
     <p>ID</p>
-    <input title="Id" type="text" name="id" value="${user.id}" readonly>
+    <input title="Id" type="text" name="id" value="${product.id}" readonly>
+    <p>ARTICLE</p>
+    <input title="Art" type="text" name="art" value="${product.art}" required>
     <p>NAME</p>
-    <input title="Name" type="text" name="name" value="${user.name}">
-    <p>EMAIL</p>
-    <input title="Email" type="text" name="email" value="${user.email}">
-    <p>AGE</p>
-    <input title="Age" type="text" name="age" value="${user.age}">
+    <input title="Name" type="text" name="name" value="${product.name}" required>
+    <p>SHELF</p>
+    <input title="Shelf" type="number" name="shelf" value="${product.shelf}" required>
+    <p>BOX</p>
+    <input title="Box" type="text" name="box" value="${product.box}" required>
     <br>
     <input type="submit" value="OK">
 </form>
 <br>
-<a href="/stocktask_war/users">To Users</a>
+<a href="/stocktask_war/products">To Products</a>
 </body>
 </html>
