@@ -1,4 +1,4 @@
 package com.igefosh.entity;
 
-public class User {
+public class OrderEntity {
 }

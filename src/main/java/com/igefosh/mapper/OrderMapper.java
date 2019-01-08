@@ -1,4 +1,4 @@
 package com.igefosh.mapper;
 
-public class UserMapper {
+public class OrderMapper {
 }

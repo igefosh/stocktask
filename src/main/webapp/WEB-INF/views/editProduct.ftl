@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create User</title>
+    <title>Update User</title>
 </head>
 <body>
-<form name="user" action="addUser" method="post">
+<form name="user" action="updateUser" method="post">
     <p>ID</p>
-    <input title="Name" type="text" name="id" value="${user.id}">
+    <input title="Id" type="text" name="id" value="${user.id}" readonly>
     <p>NAME</p>
     <input title="Name" type="text" name="name" value="${user.name}">
     <p>EMAIL</p>
@@ -18,6 +18,6 @@
     <input type="submit" value="OK">
 </form>
 <br>
-<a href="/users/stocktask_war/users">To Users</a>
+<a href="/stocktask_war/users">To Users</a>
 </body>
 </html>
